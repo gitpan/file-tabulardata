@@ -1,0 +1,24 @@
+INSTALL
+lib/File/TabularData.pm
+lib/File/TabularData/Reader.pm
+lib/File/TabularData/Readers/Base.pm
+lib/File/TabularData/Readers/CSV.pm
+lib/File/TabularData/Readers/GenericText.pm
+lib/File/TabularData/Readers/TSV.pm
+lib/File/TabularData/Readers/XLS.pm
+lib/File/TabularData/Utils.pm
+lib/File/TabularData/Writer.pm
+lib/File/TabularData/Writers/Base.pm
+lib/File/TabularData/Writers/CSV.pm
+lib/File/TabularData/Writers/GenericText.pm
+lib/File/TabularData/Writers/HTML.pm
+lib/File/TabularData/Writers/TSV.pm
+lib/File/TabularData/Writers/XML.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+t/file_tabulardata_reader.t
+t/file_tabulardata_writer.t
+t/testdata/test.xls
+t/testdata/test_zip.zip

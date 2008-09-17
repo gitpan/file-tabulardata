@@ -1,0 +1,8 @@
+1. How to install File::TabularData
+
+  Run the following commands:
+
+  # perl Makefile.PL
+  # make
+  # make test
+  # make install
