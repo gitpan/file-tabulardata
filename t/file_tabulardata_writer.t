@@ -17,7 +17,6 @@ use utf8;
 
 use Carp;
 use Data::Dumper;
-use File::BOM qw/open_bom/;
 use File::Temp 'tempfile';
 use IO::File;
 use Params::Validate ':all';
@@ -27,9 +26,9 @@ use Tie::IxHash;
 
 use File::TabularData::Reader;
 use File::TabularData::Writer;
-use File::TabularData::Utils 'catch_warnings';
+use File::TabularData::Utils qw/catch_warnings _open_bom/;
 
-use base qw(Test::Class);
+use base qw/Test::Class/;
 
 
 sub _rewind_and_verify {
@@ -443,7 +442,7 @@ sub test_encoding_and_bom : Test(8) {
         $writer->close;
 
         # Verify encoding
-        my ($fh2, $encoding) = open_bom($fn1);
+        my ($fh2, $encoding) = _open_bom($fn1);
         is($encoding, $encoding_names->{$encoding_name});
 
         # Read in, encoding determined by BOM

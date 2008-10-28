@@ -19,9 +19,13 @@ Prerequisites:
   Archive::Zip
   File::BOM
   File::NFSLock
+  IO::String
   Params::Validate
   Spreadsheet::ParseExcel
   Text::CSV_XS
+  Test::Class
+  Tie::IxHash
+  XML::SAX
 
 How to build/install:
 
@@ -31,3 +35,12 @@ Revision History:
 
 0.01  2008-09-05
   - Initial release
+
+0.02  2008-09-17
+  - Fix dependencies in Makefile.PL
+
+0.03  2008-10-16
+  - Fix dependencies in Makefile.PL
+
+0.04  2008-10-28
+  - Fix File::BOM version issue

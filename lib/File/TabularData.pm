@@ -9,6 +9,6 @@ package File::TabularData;
 use strict;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = '0.04';
 
 1;

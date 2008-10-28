@@ -256,13 +256,13 @@ my %HANDLER_CLASSES = (
 
 my %LOADED_HANDLERS;
 sub _create_handler {
-	my ($style, %args) = @_;
-	my $handler_class = $HANDLER_CLASSES{lc($style)};
-	unless ($LOADED_HANDLERS{$handler_class}) {
-		eval "use $handler_class;";
-		$LOADED_HANDLERS{$handler_class} = 1;
-	}
-	return $handler_class->new(%args);
+    my ($style, %args) = @_;
+    my $handler_class = $HANDLER_CLASSES{lc($style)};
+    unless ($LOADED_HANDLERS{$handler_class}) {
+        eval "use $handler_class;";
+        $LOADED_HANDLERS{$handler_class} = 1;
+    }
+    return $handler_class->new(%args);
 }
 
 
@@ -272,7 +272,7 @@ sub new {
     validate_with(params => \%args, spec => parameters);
     my $self = bless {}, $class;
     while (my ($k, $v) = each %args) {
-    	$self->$k($v);
+        $self->$k($v);
     }
 
     # Validate/Set the style

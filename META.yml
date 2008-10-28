@@ -1,10 +1,20 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         File-TabularData
-version:      0.01
+version:      0.04
 version_from: lib/File/TabularData.pm
 installdirs:  site
 requires:
+    Archive::Zip:                  1.18
+    File::BOM:                     0.09
+    File::NFSLock:                 1.20
+    IO::String:                    0
+    Params::Validate:              0.76
+    Spreadsheet::ParseExcel:       0.32
+    Test::Class:                   0.21
+    Text::CSV_XS:                  0.34
+    Tie::IxHash:                   0
+    XML::SAX:                      0.16
 
 distribution_type: module
 generated_by: ExtUtils::MakeMaker version 6.17
