@@ -25,6 +25,7 @@ Prerequisites:
   Text::CSV_XS
   Test::Class
   Tie::IxHash
+  XML::DOM
   XML::SAX
 
 How to build/install:
@@ -44,3 +45,6 @@ Revision History:
 
 0.04  2008-10-28
   - Fix File::BOM version issue
+
+0.05  2008-10-30
+  - Fix dependencies in Makefile.PL

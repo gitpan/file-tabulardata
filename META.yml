@@ -1,7 +1,7 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
 name:         File-TabularData
-version:      0.04
+version:      0.05
 version_from: lib/File/TabularData.pm
 installdirs:  site
 requires:
@@ -12,8 +12,9 @@ requires:
     Params::Validate:              0.76
     Spreadsheet::ParseExcel:       0.32
     Test::Class:                   0.21
-    Text::CSV_XS:                  0.34
+    Text::CSV_XS:                  0.57
     Tie::IxHash:                   0
+    XML::DOM:                      1.44
     XML::SAX:                      0.16
 
 distribution_type: module

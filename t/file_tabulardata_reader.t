@@ -899,12 +899,12 @@ m\t\to
     unlink $tmpfile;
 }
 
-sub test__read_cvs_with_utf8 : Test(1) {
+sub test__read_csv_with_utf8 : Test(1) {
     my $tmpfile = _setup_test_fh(q{col1,col2
 "テスト value 1",テスト value 2
 });
 
-    my $hashref = new File::TabularData::Reader(
+    my $hashref = File::TabularData::Reader->new(
         file => $tmpfile,
         style => 'csv',
     )->();

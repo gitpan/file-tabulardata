@@ -269,7 +269,7 @@ sub _create_handler {
 # Constructor
 sub new {
     my ($class, %args) = @_;
-    validate_with(params => \%args, spec => parameters);
+    %args = validate_with(params => \%args, spec => parameters);
     my $self = bless {}, $class;
     while (my ($k, $v) = each %args) {
         $self->$k($v);

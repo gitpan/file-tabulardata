@@ -15,9 +15,10 @@ WriteMakefile(
         'IO::String' => '0',
         'Params::Validate' => '0.76',
         'Spreadsheet::ParseExcel' => '0.32',
-        'Text::CSV_XS' => '0.34',
+        'Text::CSV_XS' => '0.57',
         'Test::Class' => '0.21',
         'Tie::IxHash' => '0',
+        'XML::DOM' => '1.44',
         'XML::SAX' => '0.16'
     },
 );

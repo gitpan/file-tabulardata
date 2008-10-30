@@ -25,17 +25,17 @@ sub support_append {
 
 
 sub generate_header {
-    die "Not implemented";
+    die "'generate_header' not implemented";
 }
 
 
 sub generate_footer {
-    die "Not implemented";
+    die "'generate_footer' not implemented";
 }
 
 
 sub generate_row {
-    die "Not implemented";
+    die "'generate_row' not implemented";
 }
 
 

@@ -11,7 +11,7 @@ use warnings;
 
 use base 'File::TabularData::Writers::Base';
 
-use MKDoc::XML::Encode;
+use XML::DOM;
 
 
 sub new {
@@ -23,7 +23,7 @@ sub new {
 
 sub generate_header {
     my ($self, $header) = @_;
-    return '<?xml version="1.0" encoding="UTF-8"?>' . "\n<xml><body><table><tr>" . join('', map { "<th>" . MKDoc::XML::Encode->process($_) . "</th>" } @$header) . "</tr>\n";
+    return '<?xml version="1.0" encoding="UTF-8"?>' . "\n<xml><body><table><tr>" . join('', map { "<th>" . XML::DOM::encodeText($_, '"&<>') . "</th>" } @$header) . "</tr>\n";
 }
 
 
@@ -35,7 +35,7 @@ sub generate_footer {
 sub generate_row {
     my ($self, $header, $line) = @_;
     return "<tr>" . join('',
-        map { "<td>" . MKDoc::XML::Encode->process($_) . "</td>" } @{[
+        map { "<td>" . XML::DOM::encodeText($_, '"&<>') . "</td>" } @{[
             map {
                 defined $line->{$_} ? $line->{$_} : ''
             } @$header

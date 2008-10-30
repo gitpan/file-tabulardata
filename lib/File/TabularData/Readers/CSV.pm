@@ -34,7 +34,8 @@ sub parse_line {
 
     my $status = $csv_parser->parse($line);
     die "Error parsing CSV file: " . $csv_parser->error_input() . ( $self->{clean_die} ? "\n" : '' ) unless ($status);
-    return [ map { decode('utf8', $_) } $csv_parser->fields() ];
+    #return [ map { decode('utf8', $_) } $csv_parser->fields() ];
+    return [ $csv_parser->fields() ];
 }
 
 
